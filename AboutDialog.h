@@ -2,6 +2,8 @@
 #define ABOUTDIALOG_H
 
 #include <QDialog>
+#include <QDesktopServices>
+#include <QUrl>
 
 namespace Ui {
 class AboutDialog;
@@ -15,6 +17,11 @@ public:
     explicit AboutDialog(QWidget *parent = 0);
     ~AboutDialog();
     
+private slots:
+    void on_btnGetSource_clicked();
+
+    void on_btnOK_clicked();
+
 private:
     Ui::AboutDialog *ui;
 };
